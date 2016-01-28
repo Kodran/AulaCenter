@@ -3,6 +3,9 @@ var Leccion = function (nombre, anexos) {
   this.anexos = [].concat(anexos);
 }
 
+var anexo = require("./anexo");
+Leccion.prototype = new anexo.Anexo();
+
 Leccion.prototype.getNombre = function() {
   return this.nombre;
 };
@@ -15,6 +18,6 @@ Leccion.prototype.getAnexos = function(nombre) {
   return this.anexos;
 };
 
-Leccion.prototype = new Anexo();
 Leccion.prototype.constructor = Leccion;
 
+exports.Leccion = Leccion;

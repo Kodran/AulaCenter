@@ -1,7 +1,8 @@
-var Curso = function (nombre, modulos) {  
+var Curso = function (nombre, id) {  
   this.nombre = nombre;
-  this.modulos = [].concat(modulos);
-}
+  this.id = id;
+  this.modulos = [];
+};
 
 Curso.prototype.setNombre = function(nombre) {
   return this.nombre = nombre;
@@ -19,6 +20,8 @@ Curso.prototype.getModulos = function(modulo) {
   return this.modulos;
 };
 
-Curso.prototype.getCursosFromDOM = function() {	
+/*Curso.prototype.getCursosFromDOM = function() {	
   return $('iframe[name="lateral"]');
-};
+};*/
+
+exports.Curso = Curso;

@@ -10,4 +10,4 @@ Anexo.prototype.setUrl = function(url) {
   return this.url = url;
 };
 
-
+exports.Anexo = Anexo;

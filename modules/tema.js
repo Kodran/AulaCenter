@@ -1,7 +1,9 @@
 var Tema = function (nombre, lecciones) {  
   this.nombre = nombre;  
   this.paginas = [].concat(lecciones)
-}
+};
+var leccion = require("./leccion.js");
+Tema.prototype = new leccion.Leccion();
 
 Tema.prototype.getNombre = function() {
   return this.nombre;
@@ -15,6 +17,6 @@ Tema.prototype.getLecciones = function() {
   return this.paginas;
 };
 
-Modulo.prototype = new Leccion();
-Modulo.prototype.constructor = Tema;
+Tema.prototype.constructor = Tema;
 
+exports.Tema = Tema;
