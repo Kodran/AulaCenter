@@ -10,6 +10,7 @@ page.onConsoleMessage = function (msg) {
 };
 
 console.log("Hola!");
+
 var postBody = 'usuario=alumnop&clave=alumnop&x=14&y=19';
 page.open('http://www.aulacenter.com/recursos/acceso.asp', 'POST', postBody, function(status) {
   
