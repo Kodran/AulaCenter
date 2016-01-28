@@ -19,5 +19,4 @@ Modulo.prototype.getTemas = function() {
   return this.temas;
 };
 
-
-
+exports.Modulo = Modulo;

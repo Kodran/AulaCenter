@@ -1,8 +1,8 @@
-var Sesion = function () {  
-  this.usuario;
-  this.password;
-  this.sesionId;
-}
+var Sesion = function (phantomPage) {  
+	var self = this;
+	self.usuario = null;
+	self.password = null;
+};
 
 Sesion.prototype.getUsuario = function() {
   return this.usuario;
@@ -17,10 +17,8 @@ Sesion.prototype.getSesion = function() {
 };
 
 Sesion.prototype.login = function(usuario, password) {
-
-	//codigo login ....
 	this.usuario = usuario;
 	this.password = password;
-	this.sesionId = 1234151;
-	return this.sesionId;  
 };
+
+exports.Sesion = Sesion;
